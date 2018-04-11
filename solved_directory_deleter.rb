@@ -15,9 +15,9 @@ def processDirectory(path)
                 processDirectory(filePath)
             end
 		# this is here because I ran the other script and then went, "oh no I can't upload zip files to GitLab"
-		#elsif File.extname(filePath) == '.zip'
-		#	FileUtils.rm(filePath)
-        #end
+		elsif File.extname(filePath) == '.zip'
+			FileUtils.rm(filePath)
+        end
     end
 end
 
