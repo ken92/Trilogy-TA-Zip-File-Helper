@@ -31,7 +31,7 @@ function processDirectory(dirPath, indent = "") {
             await makeZip(dirPath, `${dirPath}.zip`);
         }
     });
-};
+}
 
 if (process.argv.length === 2) {
     console.error("No argument for activities path provided!");
