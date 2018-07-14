@@ -4,6 +4,11 @@ const deleteDirectory = require('./delete_directory');
 
 function processDirectory(dirPath, indent = "") {
     fs.readdir(dirPath, async function (err, items) {
+        if (!items || items.length === 0) {
+            console.log("no items found!");
+            return;
+        }
+
         for (let i = 0; i < items.length; i++) {
             const fullPath = `${dirPath}/${items[i]}`;
 
